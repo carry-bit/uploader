@@ -17,17 +17,4 @@ import './index.css';
 export function init(_options) {
     // pass _options as a reference to the optionsValidator helper
     Helper.optionsValidator(_options);
-    
-    const _progressBar = new ProgressBar();
-
-    document.body.appendChild(_progressBar.getElement());
-    let i = 0;
-    const interval = setInterval(() => {
-        _progressBar._percentBar.changeValue(i + 1);
-        _progressBar._navigatorBar.changeValue(i + 1);
-        if (i > 100)
-            clearInterval(interval)
-        i += 1;
-    }, 10);
-
 }
