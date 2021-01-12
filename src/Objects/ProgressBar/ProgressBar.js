@@ -3,7 +3,7 @@ import './ProgressBar.css';
 
 class ProgressBar extends UElement{
     constructor() {
-
+        super('div');
     }
 }
 
