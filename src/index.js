@@ -12,6 +12,6 @@ import * as Helper from './Helpers/Helper';
 import './index.css';
 
 export function init(_options) {
-    // pass _options to the optionsValidator helper
+    // pass _options as a reference to the optionsValidator helper
     Helper.optionsValidator(_options);
 }
