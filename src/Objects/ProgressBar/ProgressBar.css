@@ -1,0 +1,70 @@
+.progress-bar {
+    width: 100%;
+    height: 2px;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.1);
+
+}
+
+
+.progress-bar .navigator {
+    width: 0;
+    height: 2px;
+
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    background-color: rgb(72, 168, 7);
+
+    transition: .3s width;
+
+    overflow: hidden;
+
+}
+
+.progress-bar .navigator::before {
+    content: '';
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    transform: translateY(-50%);
+    background-color: #ffffff54;
+    border-radius: 100%;
+    transition: 1s left linear;
+    animation: navigator_anim 1s 0s linear infinite;
+}
+
+.progress-bar .percent-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(calc(-100% + -1px));
+    font-size: 11px;
+    font-weight: lighter;
+    font-family: sans-serif;
+
+    transition: 0.3s right;
+}
+
+@keyframes navigator_anim {
+    from {
+        right: -20px;
+    }
+    to {
+        right: 100%;
+    }
+}

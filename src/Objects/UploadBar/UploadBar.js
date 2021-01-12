@@ -1,6 +1,7 @@
+import UElement from '../UElement';
 import './UploadBar.css';
 
-class UploadBar {
+class UploadBar extends UElement {
     constructor() {
         
     }

@@ -1,6 +1,7 @@
+import UElement from '../UElement';
 import './ProgressBar.css';
 
-class ProgressBar {
+class ProgressBar extends UElement{
     constructor() {
 
     }
