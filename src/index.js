@@ -17,4 +17,10 @@ import './index.css';
 export function init(_options) {
     // pass _options as a reference to the optionsValidator helper
     Helper.optionsValidator(_options);
+
+
+    const _uploadBar = new UploadBar(_options.text);
+
+    document.body.appendChild(_uploadBar.getElement())
+
 }

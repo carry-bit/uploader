@@ -1,0 +1,53 @@
+.uploader_upload-bar {
+    border: 0;
+    width: auto;
+    height: auto;
+}
+
+.uploader_upload-bar,
+.uploader_upload-bar * {
+    box-sizing: border-box;
+}
+
+.uploader_file-input {
+    display: none;
+}
+
+.uploader_file-label {
+    font-size: 12px;
+    font-family: IRANSans;
+    padding-top: 5px;
+    text-align: center;
+    padding: 15px 40px;
+    cursor: pointer;
+    background-color: #d9534f;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    min-width: 225px;
+
+    transition: box-shadow .3s;
+}
+
+.uploader_file-label.disabled,
+.uploader_file-label.success,
+.uploader_file-label.warning {
+    content: none;
+}
+.uploader_file-label.disabled,
+.uploader_file-label.success,
+    .uploader_file-label.warning {
+    cursor: not-allowed;
+}
+.uploader_file-label.success {
+    background-color: #5cb85c;
+}
+.uploader_file-label.warning {
+    background-color: #f0ad4e;
+}
+
+.uploader_file-label:hover,
+.uploader_file-label:active {
+
+    box-shadow: 2px 2px 0 #c73a36;
+}

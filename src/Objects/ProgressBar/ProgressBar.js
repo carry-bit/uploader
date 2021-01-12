@@ -27,6 +27,14 @@ class ProgressBar extends UElement{
         // progress bar attributes
         this.addClass('uploader_progress-bar');
     }
+
+    changeNavigatorValue(_value) {
+        this._navigatorBar.changeValue(_value);
+    }
+
+    changePercentBarValue(_value) {
+        this._percentBar.changeValue(_value);   
+    }
 }
 
 export default ProgressBar;
