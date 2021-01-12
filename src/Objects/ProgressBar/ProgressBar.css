@@ -1,10 +1,10 @@
-.progress-bar {
+.uploader_progress-bar {
     width: 100%;
     height: 2px;
     position: relative;
 }
 
-.progress-bar::before {
+.uploader_progress-bar::before {
     content: '';
     width: 100%;
     height: 2px;
@@ -18,7 +18,7 @@
 }
 
 
-.progress-bar .navigator {
+.uploader_progress-bar .uploader_navigator-bar {
     width: 0;
     height: 2px;
 
@@ -34,21 +34,21 @@
 
 }
 
-.progress-bar .navigator::before {
+.uploader_progress-bar .uploader_navigator-bar::before {
     content: '';
     width: 20px;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 50%;
     height: 100%;
     transform: translateY(-50%);
     background-color: #ffffff54;
     border-radius: 100%;
     transition: 1s left linear;
-    animation: navigator_anim 1s 0s linear infinite;
+    animation: navigator_anim 1s 0s ease-in-out infinite;
 }
 
-.progress-bar .percent-bar {
+.uploader_progress-bar .uploader_percent-bar {
     position: absolute;
     right: 0;
     top: 0;

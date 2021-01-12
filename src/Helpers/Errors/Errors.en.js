@@ -6,3 +6,8 @@ export const optionsTextNotFound = 'You should pass (text) property as options o
 export const optionsFailResponseNotFound = 'You should pass (failResponse) property as options object to the init function or it should not be empty.\nNOTE->not be empty. failResponse is the value that returns from the server when file-upload fails.';
 export const optionsSuccessMessageNotFound = 'You should pass (message) property as options.success object to the init function or it should not be empty.\nNOTE->message is the value that will be replace with upload-box text when upload is successful.';
 export const optionsFailurMessageNotFound = 'You should pass (message) property as options.failur object to the init function or it should not be empty.\nNOTE->message is the value that will be replace with upload-box text when upload is failur.';
+
+// UElement errors
+export const elementTagNameFalse = 'UElement->Tag name is not valid.';
+export const elementNotFound = 'UElement->Element is undefined.';
+export const percentValueNotValid = 'PercentBar->Percent value is invalid. it should not be less than zero.';
