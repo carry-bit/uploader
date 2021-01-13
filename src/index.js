@@ -18,9 +18,27 @@ export function init(_options) {
     // pass _options as a reference to the optionsValidator helper
     Helper.optionsValidator(_options);
 
+    // instances of objects
+    const _UploadBar = new UploadBar(_options.name, _options.text);
+    const _ProgressBar = new ProgressBar();
 
-    const _uploadBar = new UploadBar(_options.text);
+    // instnces of controllres
+    const _DOMController = new DOMController(
+        _options.el,
+        _UploadBar,
+        _ProgressBar
+    );
+    const _EventController = new EventController();
+    const _RequestController = new RequestController();
+    const _ResponseController = new ResponseController();
 
-    document.body.appendChild(_uploadBar.getElement())
+    // setup controller manager
+    const _controllerManger = new ControllerManager(
+        _DOMController,
+        _EventController,
+        _RequestController,
+        _ResponseController
+    );
 
+    _EventController.initEventListeners();
 }

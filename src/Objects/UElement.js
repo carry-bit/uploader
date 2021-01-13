@@ -36,6 +36,13 @@ class UElement {
         this._element.setAttribute(_attributeName, _attributeValue);
     }
 
+    getAttribute(_attributeName) {
+        if (this._element === undefined)
+            throw Error(err.elementNotFound);
+
+        return this._element.getAttribute(_attributeName);
+    }
+
     removeAttribute(_attributeName) {
         if (this._element === undefined)
             throw Error(err.elementNotFound);
@@ -46,7 +53,7 @@ class UElement {
     addChild(_childUElement) {
         if (this._element === undefined)
             throw Error(err.elementNotFound);
-        
+
         this._element.appendChild(_childUElement.getElement());
     }
 
@@ -55,6 +62,13 @@ class UElement {
             throw Error(err.elementNotFound);
 
         this._element.innerText = _text;
+    }
+
+    getText() {
+        if (this._element === undefined)
+            throw Error(err.elementNotFound);
+        
+        return this._element.innerText;
     }
 
     getElement() {

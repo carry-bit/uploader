@@ -1,7 +1,10 @@
 .uploader_upload-bar {
     border: 0;
-    width: auto;
+    width: 100%;
     height: auto;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
 }
 
 .uploader_upload-bar,
@@ -14,6 +17,7 @@
 }
 
 .uploader_file-label {
+    width: 100%;
     font-size: 12px;
     font-family: IRANSans;
     padding-top: 5px;
@@ -23,25 +27,30 @@
     background-color: #d9534f;
     color: #fff;
     position: relative;
-    display: inline-block;
-    min-width: 225px;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+    align-items: center;
 
     transition: box-shadow .3s;
+}
+
+.uploader_file-label.disabled:hover,
+.uploader_file-label.success:hover,
+.uploader_file-label.warning:hover {
+    box-shadow: none;
 }
 
 .uploader_file-label.disabled,
 .uploader_file-label.success,
 .uploader_file-label.warning {
-    content: none;
-}
-.uploader_file-label.disabled,
-.uploader_file-label.success,
-    .uploader_file-label.warning {
     cursor: not-allowed;
 }
+
 .uploader_file-label.success {
     background-color: #5cb85c;
 }
+
 .uploader_file-label.warning {
     background-color: #f0ad4e;
 }
@@ -49,5 +58,11 @@
 .uploader_file-label:hover,
 .uploader_file-label:active {
 
-    box-shadow: 2px 2px 0 #c73a36;
+    box-shadow: 0px 5px 0px 0px #b5322d;
+}
+
+.uploader_spinner-loading {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
 }
