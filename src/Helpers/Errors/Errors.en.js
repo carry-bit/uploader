@@ -20,3 +20,6 @@ export const rootElementNotFound = _rootElementSelector => `Can not find any ele
 export const noFileSelected = 'Please choose a file to upload';
 export const fileSizeNotValid = 'File size is invalid';
 export const fileTypeNotValid = 'File type is invalid';
+
+// NavigatorBar errors
+export const navigatorValueNotValid = "Passed value to the navigator bar is invalid."
