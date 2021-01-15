@@ -1,8 +1,7 @@
 # Uploader
 
 ## Introduction
-
-> A library for sending files in ajax with progress bar and extensive personalization.
+A library for sending files in ajax with progress bar and extensive personalization.
 <br>
 ## Part of the capabilities of the Uploader library
 ● Ability to upload files.<br>
@@ -11,8 +10,7 @@
 ● And more ...
 
 ## Installation
-
-> How to use the library is very simple. Just add the library file to your html document and then call the init function from the Uploader object.
+How to use the library is very simple. Just add the library file to your html document and then call the init function from the Uploader object.
 ```
 <script src="uploader.bundle.js"></script>
 <script>
