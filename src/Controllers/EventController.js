@@ -126,7 +126,12 @@ class EventController extends Controller {
 
     uploadProgressHandler(event) {
         const _DOM = this._controllerManager.getDOM();
-        const _uploadPercent = Math.round((event.loaded / event.total) * 100);
+        let _uploadPercent = Math.round((event.loaded / event.total) * 100);
+
+
+        if (_uploadPercent >= 99) {
+            _uploadPercent = 99;
+        }
 
         _DOM.changePercentValue(_uploadPercent);
         _DOM.changeNavigatorValue(_uploadPercent);
@@ -175,6 +180,9 @@ class EventController extends Controller {
                     _uploadBarStatus.successful,
                     (_optionsTemp.msg && _optionsTemp.msg.successfulStatusText) ? _optionsTemp.msg.successfulStatusText : null
                 );
+                _DOM.changePercentValue(100);
+                _DOM.changeNavigatorValue(100);
+
                 _DOM.disableUploadBar();
                 _DOM.removeProgressBar();
 

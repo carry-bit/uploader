@@ -15,7 +15,6 @@ class PercentBar extends UElement {
             _value = 100;
 
         this.text(_value + '%');
-        this.getElement().style = `right: ${_value}%`;
     }
 }
 
