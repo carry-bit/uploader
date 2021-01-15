@@ -56,6 +56,9 @@ class EventController extends Controller {
 
         if (_validatedFile.error) {
 
+            // clear FileInput after any validate false
+            this._controllerManager.getDOM().clearFileInput();
+
             if (_validatedFile.useAlert)
                 alert(_validatedFile.message);
 
